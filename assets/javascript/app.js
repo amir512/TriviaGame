@@ -80,6 +80,12 @@ $("document").ready(function() {
 
 	linebreak;
 
+	$("#questions").append("<h4>10. Coding is so much fun.");
+	$("#questions").append("<input type='radio' name='coding' id='true' value='True'>True</input>");
+	$("#questions").append(" <input type='radio' name='coding' id='false' value='False'>False</input)");
+
+	linebreak;
+
 	//Add button for user to submit answers
 	$("#questions").append("<br><br><button id='submit'>Submit</button>");
 
@@ -161,14 +167,30 @@ $("document").ready(function() {
 			wrong++;
 		}
 
+		if ($("input:radio[id='true']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if (wrong > 1) {
+			alert("You got " + correct + " questions correct, and " + wrong + " questions wrong.");
+			$(window).scrollTop(0);
+		}
+
+		else {
+			alert("You got " + correct + " questions correct, and " + wrong + " question wrong.");
+			$(window).scrollTop(0);
+		}
+
+	
+
 	$("#results").text("Questions answered correctly: " + correct);
 	$("#results").append("<br>");
 	$("#results").append("Questions answered incorrectly: " + wrong);
 
 	});
-
-
-
-
 
 	});
