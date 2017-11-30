@@ -40,10 +40,40 @@ $("document").ready(function() {
 
 	linebreak;
 
+	$("#questions").append("<h4>5. What is the largest fish in the ocean?");
+	$("#questions").append("<input type='radio' name='ocean' id='whaleshark' value='whaleshark'>Whale Shark</input>");
+	$("#questions").append(" <input type='radio' name='ocean' id='salmon' value='eiffel'>Salmon</input)");
+	$("#questions").append(" <input type='radio' name='ocean' id='blue' value='bluewhale'>Blue Whale</input)");
+	$("#questions").append(" <input type='radio' name='ocean' id='shark' value='greatwhite'>Great White Shark</input)");
 
+	linebreak;
+
+	$("#questions").append("<h4>6. What common word changes its prononciation when the first letter is capitalized?");
+	$("#questions").append("<input type='radio' name='word' id='read' value='Read'>read</input>");
+	$("#questions").append(" <input type='radio' name='word' id='polish' value='Polish'>polish</input)");
+	$("#questions").append(" <input type='radio' name='word' id='magma' value='Magma'>magma</input)");
+	$("#questions").append(" <input type='radio' name='word' id='america' value='America'>america</input)");
+
+	linebreak;
+
+	$("#questions").append("<h4>7. What is the most popular drink in the world that does not contain alcohol?");
+	$("#questions").append("<input type='radio' name='drink' id='water' value='water'>Water</input>");
+	$("#questions").append(" <input type='radio' name='drink' id='coffee' value='coffee'>Coffee</input)");
+	$("#questions").append(" <input type='radio' name='drink' id='coca-cola' value='coca-cola'>Coca-Cola</input)");
+	$("#questions").append(" <input type='radio' name='drink' id='juice' value='juice'>Orange Juice</input)");
+
+	linebreak;
+
+	$("#questions").append("<h4>8. Which country is bordered by both the Atlantic and Indian Oceans?");
+	$("#questions").append("<input type='radio' name='country' id='southafrica' value='southAfrica'>South Africa</input>");
+	$("#questions").append(" <input type='radio' name='country' id='india' value='India'>India</input)");
+	$("#questions").append(" <input type='radio' name='country' id='china' value='China'>China</input)");
+	$("#questions").append(" <input type='radio' name='country' id='unitedstates' value='US'>United States</input)");
+
+	linebreak;
 
 	//Add button for user to submit answers
-	$("#questions").append("<button id='submit'>Submit</button>");
+	$("#questions").append("<br><br><button id='submit'>Submit</button>");
 
 
 	//Check answers when user clicks submit
@@ -76,6 +106,38 @@ $("document").ready(function() {
 		}
 
 		if ($("input:radio[id='greatwall']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if ($("input:radio[id='whaleshark']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if ($("input:radio[id='polish']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if ($("input:radio[id='coffee']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if ($("input:radio[id='southafrica']").is(":checked")) {
 			correct++;
 		}
 
