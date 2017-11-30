@@ -72,6 +72,14 @@ $("document").ready(function() {
 
 	linebreak;
 
+	$("#questions").append("<h4>9. What is the official language of the United States?");
+	$("#questions").append("<input type='radio' name='language' id='english' value='English'>English</input>");
+	$("#questions").append(" <input type='radio' name='language' id='spanish' value='Spanish'>Spanish</input)");
+	$("#questions").append(" <input type='radio' name='language' id='chinese' value='Chinese'>Chinese</input)");
+	$("#questions").append(" <input type='radio' name='language' id='none' value='None'>None</input)");
+
+	linebreak;
+
 	//Add button for user to submit answers
 	$("#questions").append("<br><br><button id='submit'>Submit</button>");
 
@@ -138,6 +146,14 @@ $("document").ready(function() {
 		}
 
 		if ($("input:radio[id='southafrica']").is(":checked")) {
+			correct++;
+		}
+
+		else {
+			wrong++;
+		}
+
+		if ($("input:radio[id='none']").is(":checked")) {
 			correct++;
 		}
 
