@@ -180,6 +180,11 @@ $("document").ready(function() {
 			$(window).scrollTop(0);
 		}
 
+		else if (wrong == 0) {
+			alert("Perfect score!");
+			$(window).scrollTop(0);
+		}
+
 		else {
 			alert("You got " + correct + " questions correct, and " + wrong + " question wrong.");
 			$(window).scrollTop(0);
