@@ -1,5 +1,7 @@
 $("document").ready(function() {
 
+	function executeGame() {
+
 	//Establish variables to keep track of number of questions answered correct/wrong
 	var correct = 0;
 	var wrong = 0;
@@ -198,4 +200,14 @@ $("document").ready(function() {
 
 	});
 
-	});
+	};
+
+	//Excute the game
+	executeGame();
+	//Alert the user time is up
+	setTimeout(function(){ alert("Time is up!"); 
+				document.getElementById("questions").innerHTML = "Time up! Refresh the page to try again.";}, 30000);
+
+});
+
+	
